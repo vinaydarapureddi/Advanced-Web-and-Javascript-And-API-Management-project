@@ -1,0 +1,248 @@
+<style>
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      font-weight: 600;
+    }
+  
+    .originalcontent
+    {
+      margin-top:60px;
+    }
+  
+    .footer {
+      position: relative;
+      top: 250px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      color:black;
+      font-weight: 600;
+    }
+  
+  video {
+    display:block;
+    border-color:#f9f5f5;
+    border-style:solid;
+    border-width: 1px;
+    box-shadow: 4px 6px 4px 6px rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important
+  }
+  
+    .toolbar img {
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo:hover {
+      opacity: 0.8;
+    }
+  
+    .content {
+      display: flex;
+      margin: 82px auto 32px;
+      padding: 0 16px;
+      max-width: 450px;
+      flex-direction: column;
+      align-items: center;
+    }
+  .a-box
+  {
+    display: block;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    width:100%;
+  }
+  
+  .float-left-center-align{
+    width: 100%;
+    text-align:right;
+    line-height:50px
+  }
+  
+  .loginpadding {
+    padding-left:30px;
+    padding-top:30px;
+    padding-bottom:30px
+  }
+  
+  input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  </style>
+  
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <a href="/home"><img
+      width="40"
+      alt="Movie Logo"
+      src="assets/images/movie_icon.png"
+    /></a>
+    <span style="text-align:center;width:90%;font-size:x-large">Movie Buzz</span>
+      <div class="spacer"></div>
+      <a aria-label="Help" rel="noopener" href="/help" title="Help">
+        <img
+        width="40"
+        alt="Help Logo"
+        src="assets/images/help.png"
+      />    
+      </a>
+  </div>
+  
+  <div class="originalcontent">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="/login" routerLinkActive="active"><p style="text-align:right;font-size:large">login</p></a>
+        </div>
+      </div>
+      <div class = "row">
+        <div class="col-xs-12">
+          <h2>
+            <span style="color:red">L</span>
+            <span style="color:green">A</span>
+            <span style="color:blue">T</span>
+            <span style="color:violet">E</span>
+            <span style="color:greenyellow">S</span>
+            <span style="color:black">T</span>
+            <span style="color:rebeccapurple">&nbsp;&nbsp;</span>
+            <span style="color:saddlebrown">M</span>
+            <span style="color:crimson">O</span>
+            <span style="color:pink">V</span>
+            <span style="color:brown">I</span>
+            <span style="color:red">E</span>
+            <span style="color:greenyellow">S....</span>
+          </h2>
+          <p>To view the recently uploaded movies, login and watch</p>
+          <p>If you are not a registered user, kindly register</p>
+          <p>Click on the images to know more information.</p>
+          <hr>
+          <div class="row">
+            <div class="col-xs-2">
+              <div class="thumbnail">
+                <a href="/assets/images/LifeOfPI.jpg" target="_blank">
+                  <img src="/assets/images/LifeOfPI.jpg" alt="Lights" style="width:100%;height:400px">
+                  <div class="caption">
+                    <p>Life of Pi is a 2012 adventure drama film[11] based on Yann Martel's 2001 novel of the same name. Directed by Ang Lee, the film's adapted screenplay was written by David Magee, and it stars Suraj Sharma, Irrfan Khan, Rafe Spall, Tabu, Adil Hussain, and Gérard Depardieu. </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="thumbnail">
+                <a href="/assets/images/Inception.jpg" target="_blank">
+                  <img src="/assets/images/Inception.jpg" alt="Nature" style="width:100%">
+                  <div class="caption">
+                    <p>Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with his wife, Emma Thomas. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="thumbnail">
+                <a href="/assets/images/Revenant.jpg" target="_blank">
+                  <img src="/assets/images/Revenant.jpg" alt="Fjords" style="width:100%">
+                  <div class="caption">
+                    <p>The Revenant is a 2015 American epic Western action-adventure period drama film directed by Alejandro González Iñárritu. The screenplay by Mark L. Smith and Iñárritu is based in part on Michael Punke's 2002 novel of the same name, describing frontiersman Hugh Glass's experiences in 1823. </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="thumbnail">
+                <a href="/assets/images/IT.jpg" target="_blank">
+                  <img src="/assets/images/IT.jpg" alt="Lights" style="width:100%;height:400px">
+                  <div class="caption">
+                    <p>It, retroactively known as It Chapter One, is a 2017 supernatural horror film based on Stephen King's 1986 novel of the same name.[5] Produced by New Line Cinema, KatzSmith Productions, Lin Pictures, Vertigo Entertainment,[6][7] and distributed by Warner Bros.[8] </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="thumbnail">
+                <a href="/assets/images/Baahubali.jpg" target="_blank">
+                  <img src="/assets/images/Baahubali.jpg" alt="Nature" style="width:100%">
+                  <div class="caption">
+                    <p>Baahubali: The Beginning is a 2015 Indian epic action film directed by S.S Rajamouli. The film was produced by Shobu Yarlagadda and Prasad Devineni and was shot in both Telugu and Tamil. This film was also dubbed into Malayalam, Odia and Hindi.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="thumbnail">
+                <a href="/assets/images/Avengers.jpg" target="_blank">
+                  <img src="/assets/images/Avengers.jpg" alt="Nature" style="width:100%">
+                  <div class="caption">
+                    <p>Marvel's The Avengers[6] (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland[3][7]), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name. </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <div style="top: 30px;" class="footer" role="banner">
+    <p style="width:100%;text-align:center"><u>Conditions of Use & Sale </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Privacy Notice </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Interested Based Ads </u>&nbsp;&nbsp;&#169;<u>2020-2100, MovieBuzz</u></p>
+  </div>

@@ -1,0 +1,249 @@
+
+<style>
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      font-weight: 600;
+    }
+  
+    .originalcontent
+    {
+      margin-top:60px;
+    }
+  
+    .footer {
+      position: relative;
+      top: 250px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      color:black;
+      font-weight: 600;
+    }
+  
+    .toolbar img {
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo:hover {
+      opacity: 0.8;
+    }
+  
+    .content {
+      display: flex;
+      margin: 82px auto 32px;
+      padding: 0 16px;
+      max-width: 450px;
+      flex-direction: column;
+      align-items: center;
+    }
+  .a-box
+  {
+    display: block;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    width:100%;
+  }
+  
+  .float-left-center-align{
+    width: 100%;
+    text-align:right;
+    line-height:50px
+  }
+  
+  .loginpadding {
+    padding-left:30px;
+    padding-top:30px;
+    padding-bottom:30px
+  }
+  
+  input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  </style>
+  
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <a href="/home"><img
+        width="40"
+        alt="Movie Logo"
+        src="assets/images/movie_icon.png"
+      /></a>
+    <span style="text-align:center;width:90%;font-size:x-large">Movie Buzz</span>
+      <div class="spacer"></div>
+      <a aria-label="Help" rel="noopener" href="/help" title="Help">
+        <img
+        width="40"
+        alt="Help Logo"
+        src="assets/images/help.png"
+      />    
+      </a>
+  </div>
+  
+  <div class="originalcontent">
+    <br>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-12">
+              <p style="text-align:center;font-size:large;color:#f44336"><b><u>Registration Form</u></b></p>
+            </div>
+          </div>
+          <br>
+          <form #userRegistrationForm="ngForm" ngSubmit="postUser(userRegistrationForm)">
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">First Name:</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="text" name="fname" id="fname" value="" [(ngModel)]="fname" placeholder="Enter your First Name">
+              <p style="color:red;font-size:smaller" *ngIf="fname.length<1">Please enter valid first name</p>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">Last Name:</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="text" name="lname" id="lname" value="" [(ngModel)]="lname" placeholder="Enter your Last Name">
+              <p style="color:red;font-size:smaller" *ngIf="lname.length<1">Please enter valid last name</p>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">Username:</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="text" name="uname" id="uname" value="" [(ngModel)]="username" placeholder="Enter your User Name">
+              <p style="color:red;font-size:smaller" *ngIf="username.length<8">Please enter valid username</p>
+            </div>
+          </div>
+  
+  
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">Password :</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="password" name="password" id="password" value="" [(ngModel)]="password" placeholder="Enter your Password">
+              <p style="color:red;font-size:smaller" *ngIf="password.length<8">Please enter valid password</p>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">Re-enter Password:</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="password" name="repassword" id="repassword" value="" [(ngModel)]="reenteredPassword" placeholder="Enter your Password again">
+              <p style="color:red;font-size:smaller" *ngIf="reenteredPassword!=password">Please match the password</p>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">Contact Number:</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="text" name="contactnumber" id="contactnumber" value="" [(ngModel)]="contactNumber" placeholder="Enter your Contact Number">
+              <p style="color:red;font-size:smaller" *ngIf="contactNumber.length!=10">Please enter valid contact number</p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-6">
+              <label class="float-left-center-align">Email ID:</label>
+            </div>
+            <div class="col-xs-6">
+              <input class="form-control" type="email" name="emailid" id="emailid" value="" [(ngModel)]="emailID" placeholder="Enter your Email ID">
+              <p style="color:red;font-size:smaller" *ngIf="emailID.length<8">Please enter valid Eamil ID</p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-6">
+              <input style="float:right" type="submit" (click)="submitRegistrationReq()" value="Submit">
+            </div>
+            <div class="col-xs-6">
+              <input type="reset" (click)="resetRegistrationReq()" value="Reset">
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="col-xs-6">
+          <video width="90%" height="500" controls>
+              <source src="assets/videos/Video1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <div class="footer" role="banner">
+    <p style="width:100%;text-align:center"><u>Conditions of Use & Sale </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Privacy Notice </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Interested Based Ads </u>&nbsp;&nbsp;&#169;<u>2020-2100, MovieBuzz</u></p>
+  </div>

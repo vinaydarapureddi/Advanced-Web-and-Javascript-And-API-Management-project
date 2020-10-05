@@ -1,0 +1,158 @@
+<style>
+    :host {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 14px;
+      color: #333;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 8px 0;
+    }
+    
+    p {
+      margin: 0;
+    }
+    
+    .spacer {
+      flex: 1;
+    }
+    
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      font-weight: 600;
+    }
+    
+    .footer {
+      position: relative;
+      top: 250px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      color:black;
+      font-weight: 600;
+    }
+    
+    .toolbar img {
+      margin: 0 16px;
+    }
+    
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+    
+    .toolbar #twitter-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .content {
+      display: flex;
+      margin: 82px auto 32px;
+      padding: 0 16px;
+      max-width: 450px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .a-box
+    {
+    display: block;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    width:100%;
+    }
+    
+    .loginpadding {
+    padding-left:30px;
+    padding-top:30px;
+    padding-bottom:30px
+    }
+    
+    input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    
+    button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    }
+    
+    button:hover {
+    opacity: 0.8;
+    }
+    </style>
+    
+    <!-- Toolbar -->
+    <div class="toolbar" role="banner">
+        <a href="/home"><img
+            width="40"
+            alt="Movie Logo"
+            src="assets/images/movie_icon.png"
+          /></a>
+    <span style="text-align:center;width:90%;font-size:x-large">Movie Buzz</span>
+      <div class="spacer"></div>
+      <a aria-label="Help" rel="noopener" href="/help" title="Help">
+        <img
+        width="40"
+        alt="Help Logo"
+        src="assets/images/help.png"
+      />    
+      </a>
+    </div>
+    
+    <div class="content" role="main">
+    <br>
+    <br>
+    <div class="a-box">
+      <div class="loginpadding">
+        <span><label style="font-size:x-large"><b>Sign-In</b>&nbsp;&nbsp;</label></span> 
+        <br>
+        <br>
+        <br>
+        <span><label><b>Username :</b>&nbsp;&nbsp;</label></span>
+        <br>
+        <input type = "text" name = "username" value = "" id="username" placeholder="username" [(ngModel)]="username" required> <p style="color:red;font-size:smaller" *ngIf="username.length<8">Please enter valid username with 8 characters minimum</p>
+        <br>
+        <br>
+        <span><label><b>Password :</b>&nbsp;&nbsp;</label></span>
+        <br>
+        <input type = "password" name = "password" value = "" id="password" placeholder="password" [(ngModel)]="password" required><p style="color:red;font-size:smaller" *ngIf="password.length<8">Please enter valid password with 8 characters minimum</p>
+        <br>
+        <button type="submit" (click)="onSubmitButtonClick()">Login</button>
+        <p style="text-align:center"><a href="/registration">Register Me</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      </div>
+    </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer" role="banner">
+    <p style="width:100%;text-align:center"><u>Conditions of Use & Sale </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Privacy Notice </u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Interested Based Ads </u>&nbsp;&nbsp;&#169;<u>2020-2100, MovieBuzz</u></p>
+    </div>    
